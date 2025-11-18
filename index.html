@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Illustrious Artists Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="assets/script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-main">
+      <h1>
+        <span class="logo-dot" aria-hidden="true"></span>
+        <span class="title-rest">Illustrious Artists Gallery</span>
+      </h1>
+    </div>
+
+    <div class="character-controls" aria-label="Character">
+      <span class="character-label">Character</span>
+      <div class="character-options" role="radiogroup" aria-label="Character options">
+        <button
+          type="button"
+          class="character-option is-active"
+          data-character="zelda"
+          aria-pressed="true"
+        >
+          Zelda
+        </button>
+        <button
+          type="button"
+          class="character-option"
+          data-character="princess_peach"
+          aria-pressed="false"
+        >
+          Princess Peach
+        </button>
+        <button
+          type="button"
+          class="character-option"
+          data-character="mercy"
+          aria-pressed="false"
+        >
+          Mercy
+        </button>
+      </div>
+    </div>
+
+    <div class="size-controls" aria-label="Image size">
+      <span class="size-label">Size</span>
+      <div class="size-options" role="radiogroup" aria-label="Image size options">
+        <button
+          type="button"
+          class="size-option is-active"
+          data-size="default"
+          aria-pressed="true"
+        >
+          Default
+        </button>
+        <button
+          type="button"
+          class="size-option"
+          data-size="large"
+          aria-pressed="false"
+        >
+          Large
+        </button>
+        <button
+          type="button"
+          class="size-option"
+          data-size="xlarge"
+          aria-pressed="false"
+        >
+          X-Large
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="status" id="status">
+      <span class="status-dot" id="statusDot"></span>
+      <span id="statusText">Loading artists list…</span>
+    </div>
+    <div id="error" class="error" role="alert" aria-live="assertive"></div>
+    <div class="gallery-grid" id="gallery"></div>
+  </main>
+
+  <div class="toast" id="toast" aria-live="polite">
+    <span class="icon">✓</span>
+    <span class="text-main" id="toastMain">Copied</span>
+    <span class="text-sub" id="toastSub"></span>
+  </div>
+</body>
+</html>
